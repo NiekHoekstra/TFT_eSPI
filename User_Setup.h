@@ -8,6 +8,9 @@
 //   run without the need to make any more changes for a particular hardware setup!
 //   Note that some sketches are designed for a particular TFT pixel width/height
 
+// Treat this as the default.
+// Do not let subsequent includes overwrite settings
+#ifndef USER_SETUP_INFO
 // User defined information reported by "Read_User_Setup" test & diagnostics example
 #define USER_SETUP_INFO "User_Setup"
 
@@ -381,3 +384,6 @@
 // so changing it here has no effect
 
 // #define SUPPORT_TRANSACTIONS
+
+// endif for #ifndef USER_SETUP_INFO
+#endif
